@@ -1,0 +1,65 @@
+/* Dark mode */
+body {
+    background-color: #1a202c;
+  }
+  
+  .bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #6EE7B7, #3B82F6);
+    animation: gradientAnimation 6s infinite linear;
+    z-index: -1;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background: linear-gradient(45deg, #6EE7B7, #3B82F6);
+    }
+    50% {
+      background: linear-gradient(45deg, #FF7EE5, #9333EA);
+    }
+    100% {
+      background: linear-gradient(45deg, #6EE7B7, #3B82F6);
+    }
+  }
+  
+  /* Card hover effect (3D effect) */
+  .project-card {
+    background-color: #2D3748;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .experience-item {
+    background-color: #2D3748;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .experience-item:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
