@@ -4,26 +4,7 @@ body {
   }
   
   .bg-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #6EE7B7, #3B82F6);
-    animation: gradientAnimation 6s infinite linear;
-    z-index: -1;
-  }
-  
-  @keyframes gradientAnimation {
-    0% {
-      background: linear-gradient(45deg, #6EE7B7, #3B82F6);
-    }
-    50% {
-      background: linear-gradient(45deg, #FF7EE5, #9333EA);
-    }
-    100% {
-      background: linear-gradient(45deg, #6EE7B7, #3B82F6);
-    }
+    display: none;
   }
   
   /* Card hover effect (3D effect) */
@@ -62,4 +43,14 @@ body {
   html {
     scroll-behavior: smooth;
   }
-  
+
+  /* Ensure the canvas is positioned as a background for the entire page */
+  #three-canvas {
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10; /* Place it behind all other elements */
+    pointer-events: none; /* Prevent the canvas from blocking mouse interactions */
+  }

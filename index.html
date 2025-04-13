@@ -9,9 +9,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-900 text-white">
-
-  <!-- Animated Background -->
-  <div class="bg-animation"></div>
+  <canvas id="three-canvas" class="absolute top-0 left-0 w-full h-full -z-10"></canvas>
 
   <!-- Header Section -->
   <header class="flex justify-between items-center p-6 absolute top-0 left-0 w-full z-10">
@@ -24,7 +22,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="flex justify-center items-center min-h-screen flex-col text-center">
+  <section class="flex justify-center items-center min-h-screen flex-col text-center relative">
     <h1 class="text-5xl mb-4">Data Analyst</h1>
     <p class="text-lg mb-6">Turning data into actionable insights for better decision-making</p>
     <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-400 transform transition-all hover:scale-105">
@@ -81,6 +79,6 @@
     <p>&copy; 2025 Shivam Chavan</p>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="scripts.js" type="module"></script>
 </body>
 </html>
