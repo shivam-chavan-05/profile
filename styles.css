@@ -121,6 +121,20 @@ body {
   }
 }
 
+/* Adjust project and experience cards for mobile */
+@media (max-width: 768px) {
+  .project-card,
+  .experience-item {
+    flex: 1 1 100%; /* Make each card take up 100% of the row */
+    max-width: 100%; /* Ensure the card doesn't exceed the row width */
+    margin: 0 0 1rem 0; /* Add spacing between cards */
+  }
+
+  .flex-wrap {
+    gap: 1rem; /* Adjust spacing between cards */
+  }
+}
+
 /* Dark mode */
 .bg-animation {
   display: none;
@@ -133,32 +147,49 @@ body {
   padding-right: 1.5rem; /* 6px padding on the right */
 }
 
-/* Project card styling */
-.project-card {
+/* Projects and Experience Section */
+.flex-wrap {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 cards per row */
+  gap: 1.5rem; /* Space between cards */
+}
+
+/* Work Experience Cards */
+.project-card,
+.experience-item {
   background-color: #2D3748; /* Dark background for the cards */
   color: white; /* Text color */
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(33.333% - 16px); /* Responsive width: 3 cards per row */
-  max-width: 300px; /* Limit the maximum width of each card */
-  margin: 8px; /* Add margin around each card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 600px; /* Limit the maximum width of the cards */
+  width: 100%; /* Ensure the card takes up the full width of its container */
+  margin: 0 auto; /* Center the card horizontally */
 }
 
-.project-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.project-card:hover,
+.experience-item:hover {
+  transform: translateY(-10px) scale(1.05); /* Slight hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Mobile View: One card per row */
+@media (max-width: 768px) {
+  .flex-wrap {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: 1fr; /* One card per row */
+    gap: 1.5rem; /* Space between cards */
+  }
+
+  .project-card,
+  .experience-item {
+    max-width: 100%; /* Ensure the card takes up the full width */
+    margin: 0 auto; /* Center the card horizontally */
+  }
 }
 
 /* Ensure proper wrapping and spacing */
-.flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px; /* Space between cards */
-}
-
 .experience-item {
   background-color: #2D3748;
   padding: 15px;
