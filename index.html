@@ -7,6 +7,7 @@
   <title>Shivam Chavan | Data Analyst</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.4/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
 </head>
 <body class="bg-gray-900 text-white">
   <canvas id="three-canvas" class="absolute top-0 left-0 w-full h-full -z-10"></canvas>
@@ -17,14 +18,17 @@
     <div class="flex space-x-4">
       <a href="#projects" class="hover:text-gray-400">Projects</a>
       <a href="#experience" class="hover:text-gray-400">Experience</a>
+      <a href="#art" class="hover:text-gray-400">Art</a> <!-- Added Art link -->
       <a href="#contact" class="hover:text-gray-400">Contact</a>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="flex justify-center items-center min-h-screen flex-col text-center relative">
-    <h1 class="text-5xl mb-4">Data Analyst</h1>
-    <p class="text-lg mb-6">Turning data into actionable insights for better decision-making</p>
+    <h1 class="text-5xl mb-4">
+      <span id="dynamic-text" class="text-blue-500"></span>
+    </h1>
+    <p class="text-lg mb-6">Turning real-world data into insights, models, and scalable apps</p>
     <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-400 transform transition-all hover:scale-105">
       Get in Touch
     </button>
@@ -35,35 +39,223 @@
     <h2 class="text-3xl mb-4">About Me</h2>
     <p class="max-w-4xl mx-auto">I’m a data analyst focused on transforming complex data into actionable insights. With experience across various domains, I help organizations make data-driven decisions.</p>
   </section>
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-6">
+    <h2 class="text-3xl text-center mb-6">Skills</h2>
+    <div class="skills-container flex flex-wrap justify-center items-center gap-8 max-w-6xl mx-auto">
+        <div class="skill-item">
+            <i class="fab fa-html5 skill-icon"></i>
+            <p class="skill-name">HTML</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-css3-alt skill-icon"></i>
+            <p class="skill-name">CSS</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-cogs skill-icon"></i>
+            <p class="skill-name">Pandas</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-brain skill-icon"></i>
+            <p class="skill-name">KMeans</p>
+          </div>    
+          <div class="skill-item">
+            <i class="fab fa-js-square skill-icon"></i>
+            <p class="skill-name">JavaScript</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-python skill-icon"></i>
+            <p class="skill-name">Python</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-react skill-icon"></i>
+            <p class="skill-name">React</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-node skill-icon"></i>
+            <p class="skill-name">Node.js</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database skill-icon"></i>
+            <p class="skill-name">MongoDB</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-brain skill-icon"></i>
+            <p class="skill-name">SVM</p>
+          </div>
+
+          <div class="skill-item">
+            <i class="fas fa-database skill-icon"></i>
+            <p class="skill-name">SQL</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-chart-bar skill-icon"></i>
+            <p class="skill-name">Power BI</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-cogs skill-icon"></i>
+            <p class="skill-name">VBA</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-cloud skill-icon"></i>
+            <p class="skill-name">GCP</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-aws skill-icon"></i>
+            <p class="skill-name">AWS</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-docker skill-icon"></i>
+            <p class="skill-name">Docker</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-git-alt skill-icon"></i>
+            <p class="skill-name">Git</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-code-branch skill-icon"></i>
+            <p class="skill-name">GitHub</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database skill-icon"></i>
+            <p class="skill-name">Oracle APEX</p>
+          </div>
+          
+          <div class="skill-item">
+            <i class="fas fa-cogs skill-icon"></i>
+            <p class="skill-name">Scikit-learn</p>
+          </div>
+          
+          
+          <div class="skill-item">
+            <i class="fas fa-brain skill-icon"></i>
+            <p class="skill-name">Machine Learning</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-cogs skill-icon"></i>
+            <p class="skill-name">NumPy</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-chart-line skill-icon"></i>
+            <p class="skill-name">Data Visualization</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-code skill-icon"></i>
+            <p class="skill-name">Flask</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-network-wired skill-icon"></i>
+            <p class="skill-name">APIs</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database skill-icon"></i>
+            <p class="skill-name">BigQuery</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-project-diagram skill-icon"></i>
+            <p class="skill-name">ETL Pipelines</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-brain skill-icon"></i>
+            <p class="skill-name">Gradient Boost</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-tools skill-icon"></i>
+            <p class="skill-name">Databricks</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-laptop-code skill-icon"></i>
+            <p class="skill-name">Jupyter</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-brain skill-icon"></i>
+            <p class="skill-name">AdaBoost</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-chart-pie skill-icon"></i>
+            <p class="skill-name">Looker Studio</p>
+          </div>
+          
+          <div class="skill-item">
+            <i class="fas fa-globe skill-icon"></i>
+            <p class="skill-name">Leaflet</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-brain skill-icon"></i>
+            <p class="skill-name">XGBoost</p>
+          </div>
+          
+          <div class="skill-item">
+            <i class="fas fa-chart-area skill-icon"></i>
+            <p class="skill-name">R Shiny</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-brain skill-icon"></i>
+            <p class="skill-name">Naive Bayes</p>
+          </div>
+          
+          
+        </div>
+  </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="bg-gray-800 py-20">
+  <section id="projects" class="py-20 px-6">
     <h2 class="text-3xl text-center mb-6">Projects</h2>
-    <div class="flex justify-center space-x-8">
-      <div class="project-card hover:scale-105">
+    <div class="flex flex-wrap justify-center gap-8">
+      <a href="https://github.com/your-username/taxi-data-analytics" target="_blank" class="project-card hover:scale-105">
         <h3 class="text-xl mb-2">Taxi Data Analytics</h3>
         <p class="text-sm">Used Python & GCP to build ETL pipelines for analyzing Yellow & Green taxi data.</p>
-      </div>
-      <div class="project-card hover:scale-105">
+      </a>
+      <a href="https://github.com/your-username/foodstack-hoyahacks" target="_blank" class="project-card hover:scale-105">
         <h3 class="text-xl mb-2">FoodStack – HoyaHacks</h3>
         <p class="text-sm">Built an inventory optimization tool using ReactJS, Node.js, MongoDB, and SGD.</p>
-      </div>
+      </a>
+      <a href="https://github.com/your-username/portfolio-website" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Portfolio Website</h3>
+        <p class="text-sm">Designed and developed a personal portfolio website using HTML, CSS, and JavaScript.</p>
+      </a>
+      <a href="https://github.com/your-username/ecommerce-platform" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">E-Commerce Platform</h3>
+        <p class="text-sm">Developed a scalable e-commerce platform using React, Node.js, and MongoDB.</p>
+      </a>
     </div>
   </section>
 
+  
   <!-- Experience Section -->
   <section id="experience" class="p-10">
     <h2 class="text-3xl text-center mb-6">Work Experience</h2>
-    <div class="experience-item">
-      <h3 class="text-xl">Graduate Instructional Assistant – George Washington University</h3>
-      <p class="text-sm">August 2024 – Present | Led SQL-focused lab sessions, guided students in data analysis and visualization.</p>
-    </div>
-    <div class="experience-item">
-      <h3 class="text-xl">Research Assistant – George Washington University</h3>
-      <p class="text-sm">May 2024 – August 2024 | Built data pipelines, applied machine learning models for workforce analytics.</p>
+    <div class="flex flex-wrap justify-center gap-8">
+      <a href="https://github.com/your-username/taxi-data-analytics" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Taxi Data Analytics</h3>
+        <p class="text-sm">Used Python & GCP to build ETL pipelines for analyzing Yellow & Green taxi data.</p>
+      </a>
+      <a href="https://github.com/your-username/foodstack-hoyahacks" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">FoodStack – HoyaHacks</h3>
+        <p class="text-sm">Built an inventory optimization tool using ReactJS, Node.js, MongoDB, and SGD.</p>
+      </a>
+      <a href="https://github.com/your-username/portfolio-website" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Portfolio Website</h3>
+        <p class="text-sm">Designed and developed a personal portfolio website using HTML, CSS, and JavaScript.</p>
+      </a>
+      <a href="https://github.com/your-username/ecommerce-platform" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">E-Commerce Platform</h3>
+        <p class="text-sm">Developed a scalable e-commerce platform using React, Node.js, and MongoDB.</p>
+      </a>
     </div>
   </section>
-
+  <!-- Art Section -->
+  <section id="art" class="py-20 px-6">
+    <h2 class="text-3xl text-center mb-6">Art</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <img src="02.jpg" alt="Art 1" class="art-image">
+      <img src="02.jpg" alt="Art 2" class="art-image">
+      <img src="03.jpg" alt="Art 3" class="art-image">
+      <img src="04.jpg" alt="Art 4" class="art-image">
+      <img src="05.jpg" alt="Art 5" class="art-image">
+      <img src="06.jpg" alt="Art 6" class="art-image">
+    </div>
+  </section>
   <!-- Contact Section -->
   <section id="contact" class="bg-gray-800 text-center py-20">
     <h2 class="text-3xl mb-4">Contact</h2>

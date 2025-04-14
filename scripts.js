@@ -79,3 +79,61 @@ document.addEventListener('DOMContentLoaded', function () {
     mesh.geometry = new THREE.IcosahedronGeometry(newBaseSize, detailLevel);
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const textElement = document.getElementById('dynamic-text');
+  const textArray = [
+    'Data Analyst',
+    'Data Scientist',
+    'ML Engineer',
+    'AI Engineer',
+    'Software Engineer',
+    'Frontend Developer',
+    'Backend Developer',
+    'Full Stack Developer',
+  ];
+  let textIndex = 0;
+
+  function updateText() {
+    textElement.textContent = textArray[textIndex];
+    textIndex = (textIndex + 1) % textArray.length; // Loop back to the first text
+  }
+
+  // Update text every 3 seconds
+  updateText(); // Set initial text
+  setInterval(updateText, 3000);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const skillItems = document.querySelectorAll('.skill-item');
+  const skillsPerRow = Math.min(7, Math.floor(window.innerWidth / 150)); // Show up to 7 skills per row
+  let currentStartIndex = 0;
+
+  function updateSkills() {
+    // Hide all skills
+    skillItems.forEach((item) => {
+      item.style.display = 'none';
+    });
+
+    // Show the next set of skills
+    for (let i = 0; i < skillsPerRow; i++) {
+      const index = (currentStartIndex + i) % skillItems.length; // Loop back to the start if needed
+      skillItems[index].style.display = 'flex';
+    }
+
+    // Move to the next set of skills
+    currentStartIndex = (currentStartIndex + skillsPerRow) % skillItems.length;
+  }
+
+  // Initialize the skills display
+  updateSkills();
+  setInterval(updateSkills, 3000); // Change skills every 3 seconds
+
+  // Update skills on window resize
+  window.addEventListener('resize', () => {
+    currentStartIndex = 0; // Reset to the first set of skills
+    updateSkills();
+  });
+});
+
+
