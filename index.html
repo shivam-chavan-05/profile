@@ -12,24 +12,40 @@
 <body class="bg-gray-900 text-white">
   <canvas id="three-canvas" class="absolute top-0 left-0 w-full h-full -z-10"></canvas>
 
-  <!-- Header Section -->
-  <header class="flex justify-between items-center p-6 absolute top-0 left-0 w-full z-10">
-    <div class="text-3xl font-semibold">Shivam Chavan</div>
-    <div class="flex space-x-4">
-      <a href="#projects" class="hover:text-gray-400">Projects</a>
-      <a href="#experience" class="hover:text-gray-400">Experience</a>
-      <a href="#art" class="hover:text-gray-400">Art</a> <!-- Added Art link -->
-      <a href="#contact" class="hover:text-gray-400">Contact</a>
+  <header class="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo"><a href="#hero">Shivam Chavan</a></div>
+
+      <!-- Hamburger Menu Button -->
+      <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul id="menu" class="nav-links">
+          
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#art">Art</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="flex justify-center items-center min-h-screen flex-col text-center relative">
+  <section id="hero" class="flex justify-center items-center min-h-screen flex-col text-center relative">
     <h1 class="text-5xl mb-4">
       <span id="dynamic-text" class="text-blue-500"></span>
     </h1>
     <p class="text-lg mb-6">Turning real-world data into insights, models, and scalable apps</p>
-    <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-400 transform transition-all hover:scale-105">
+    <button onclick="location.href='#contact'" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-400 transform transition-all hover:scale-105">
       Get in Touch
     </button>
   </section>
@@ -259,11 +275,16 @@
   <!-- Contact Section -->
   <section id="contact" class="bg-gray-800 text-center py-20">
     <h2 class="text-3xl mb-4">Contact</h2>
-    <p class="text-lg mb-6">Feel free to get in touch with me!</p>
-    <form class="flex justify-center">
-      <input type="email" placeholder="Your Email" class="px-4 py-2 rounded-l-full">
-      <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-r-full hover:bg-blue-400">Send</button>
-    </form>
+    <p class="text-lg mb-6">Feel free to get in touch with me! <br> shivamchavan05@gmail.com</p>
+    <!-- Social Media Links -->
+    <div class="flex justify-center space-x-6">
+      <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="text-white text-3xl hover:text-blue-400">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/your-github-profile" target="_blank" class="text-white text-3xl hover:text-blue-400">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
   </section>
 
   <!-- Footer Section -->

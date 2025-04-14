@@ -136,4 +136,35 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  const navbar = document.querySelector('.navbar');
+  let lastScrollY = window.scrollY;
+
+  // Toggle the menu on hamburger click
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show'); // Show/hide the menu
+    menuToggle.classList.toggle('open'); // Animate the hamburger icon
+  });
+
+  // Close the menu when a link is clicked
+  menu.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      menu.classList.remove('show');
+      menuToggle.classList.remove('open');
+    }
+  });
+
+  // Hide/show navbar on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+      navbar.classList.add('hidden'); // Hide navbar when scrolling down
+    } else {
+      navbar.classList.remove('hidden'); // Show navbar when scrolling up
+    }
+    lastScrollY = window.scrollY;
+  });
+});
+
 

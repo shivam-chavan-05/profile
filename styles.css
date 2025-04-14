@@ -1,199 +1,327 @@
-/* Dark mode */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: #1a202c;
-  }
-  
-  .bg-animation {
-    display: none;
-  }
-  
-  /* Remove the gray background from the Projects section */
-  #projects {
-    background-color: transparent; /* Make the background transparent */
-    padding-left: 1.5rem; /* 6px padding on the left */
-    padding-right: 1.5rem; /* 6px padding on the right */
-  }
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #1a202c;
+}
 
-  /* Project card styling */
-  .project-card {
-    background-color: #2D3748; /* Dark background for the cards */
-    color: white; /* Text color */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 16px); /* Responsive width: 3 cards per row */
-    max-width: 300px; /* Limit the maximum width of each card */
-    margin: 8px; /* Add margin around each card */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Ensure proper wrapping and spacing */
-  .flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px; /* Space between cards */
-  }
-  
-  .experience-item {
-    background-color: #2D3748;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .experience-item:hover {
-    transform: translateY(-8px);
-  }
-  
-  /* Button hover effect */
-  button:hover {
-    transform: translateY(-4px);
-  }
-  
-  /* Smooth scroll */
-  html {
-    scroll-behavior: smooth;
-  }
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent; /* Fully transparent background */
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-  /* Ensure the canvas is positioned as a background for the entire page */
-  #three-canvas {
-    position: fixed; /* Fixed position to cover the entire viewport */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -10; /* Place it behind all other elements */
-    pointer-events: none; /* Prevent the canvas from blocking mouse interactions */
-  }
+.navbar.hidden {
+  transform: translateY(-100%); /* Hide navbar when scrolling down */
+}
 
-  /* Dynamic text animation */
-  #dynamic-text {
-    display: inline-block;
-    font-weight: bold; /* Optional: Make the text bold */
-    color: white; /* Set the text color to white */
-    animation: fade-in-out 3s ease-in-out infinite; /* Match the interval in JavaScript */
-  }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  @keyframes fade-in-out {
-    0% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    20% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    80% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-  }
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
 
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent background for nav links */
+  padding: 0.5rem 1rem;
+  border-radius: 12px; /* Rounded corners */
+}
 
-  /* Art Section Grid */
-  #art {
-    background-color: transparent; /* Transparent background */
-  }
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
 
-  .grid {
-    display: grid;
-    gap: 1.5rem; /* Space between grid items */
-  }
+.nav-links li a:hover {
+  color: #2563eb; /* Blue hover effect */
+}
 
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
-  }
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1100;
+}
 
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-  }
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
-  }
-
-  .art-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .art-image:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  }
-
-  /* Skills Section */
-  #skills {
-    background-color: transparent; /* Transparent background */
-  }
-
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem; /* Space between skill items */
-  }
-
-  .skill-item {
-    display: flex;
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links by default */
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 120px; /* Fixed width for each skill item */
-    height: 120px; /* Fixed height for each skill item */
-    text-align: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.9); /* Translucent background for mobile */
+    padding: 1rem;
+    text-align: right;
+    gap: 1rem;
+    border-radius: 12px; /* Rounded corners */
   }
 
-  .skill-icon {
-    font-size: 3rem; /* Icon size */
-    color: #3B82F6; /* Icon color */
-    margin-bottom: 0.5rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+  .nav-links.show {
+    display: flex; /* Show links when toggled */
   }
 
-  .skill-icon:hover {
-    transform: scale(1.2); /* Slight zoom on hover */
-    color: #2563EB; /* Change color on hover */
+  .hamburger {
+    display: flex; /* Show hamburger menu on mobile */
   }
 
-  .skill-name {
-    font-size: 1rem;
-    color: white;
-    font-weight: bold;
+  .hamburger.open .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
   }
 
-  /* Animation for looping skills */
-  @keyframes fade-in-out {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    20% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    80% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
+  .hamburger.open .hamburger-line:nth-child(2) {
+    opacity: 0;
   }
+
+  .hamburger.open .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Dark mode */
+.bg-animation {
+  display: none;
+}
+
+/* Remove the gray background from the Projects section */
+#projects {
+  background-color: transparent; /* Make the background transparent */
+  padding-left: 1.5rem; /* 6px padding on the left */
+  padding-right: 1.5rem; /* 6px padding on the right */
+}
+
+/* Project card styling */
+.project-card {
+  background-color: #2D3748; /* Dark background for the cards */
+  color: white; /* Text color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 16px); /* Responsive width: 3 cards per row */
+  max-width: 300px; /* Limit the maximum width of each card */
+  margin: 8px; /* Add margin around each card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure proper wrapping and spacing */
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px; /* Space between cards */
+}
+
+.experience-item {
+  background-color: #2D3748;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-8px);
+}
+
+/* Button hover effect */
+button:hover {
+  transform: translateY(-4px);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure the canvas is positioned as a background for the entire page */
+#three-canvas {
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10; /* Place it behind all other elements */
+  pointer-events: none; /* Prevent the canvas from blocking mouse interactions */
+}
+
+/* Dynamic text animation */
+#dynamic-text {
+  display: inline-block;
+  font-weight: bold; /* Optional: Make the text bold */
+  color: white; /* Set the text color to white */
+  animation: fade-in-out 3s ease-in-out infinite; /* Match the interval in JavaScript */
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Art Section Grid */
+#art {
+  background-color: transparent; /* Transparent background */
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem; /* Space between grid items */
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
+}
+
+.sm\:grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+}
+
+.md\:grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+}
+
+.art-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Skills Section */
+#skills {
+  background-color: transparent; /* Transparent background */
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Space between skill items */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px; /* Fixed width for each skill item */
+  height: 120px; /* Fixed height for each skill item */
+  text-align: center;
+}
+
+.skill-icon {
+  font-size: 3rem; /* Icon size */
+  color: #3B82F6; /* Icon color */
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+  color: #2563EB; /* Change color on hover */
+}
+
+.skill-name {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Animation for looping skills */
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* Social Media Icons */
+#contact .flex a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#contact .flex a:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+  color: #2563EB; /* Blue color on hover */
+}
