@@ -48,12 +48,22 @@
     <button onclick="location.href='#contact'" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-400 transform transition-all hover:scale-105">
       Get in Touch
     </button>
+
+    <!-- Simplified Instruction Text -->
+    <p class="text-white text-lg mt-8">Click to change geometry</p>
   </section>
 
   <!-- About Section -->
   <section id="about" class="p-10 text-center">
     <h2 class="text-3xl mb-4">About Me</h2>
-    <p class="max-w-4xl mx-auto">I’m a data analyst focused on transforming complex data into actionable insights. With experience across various domains, I help organizations make data-driven decisions.</p>
+    <p class="max-w-4xl mx-auto" style="text-align: justify;">I'm Shivam Chavan, a tech enthusiast with a background that bridges both engineering and computer 
+        science. I completed my Bachelor's in Mechanical Engineering, where I developed a strong foundation in problem-solving and 
+        analytical thinking. Driven by a growing passion for technology, I pursued a Master's in Computer Science at George Washington
+         University, where I’ve been sharpening my skills in data science, full-stack development, and cloud technologies. Over time, 
+         I’ve developed proficiency in tools like Python, React, SQL, MongoDB, GCP, and AWS, picking up new skills through hands-on 
+         learning, experimentation, and continuous curiosity. Outside the world of code, I’m deeply passionate about art. You’ll find a dedicated section for my artwork at the end of 
+         this portfolio. I’m currently open to full-time opportunities in roles such as Software Engineer, Data Analyst, 
+         Data Scientist, Backend Developer, or Full-Stack Developer — feel free to connect with me!</p>
   </section>
   <!-- Skills Section -->
   <section id="skills" class="py-20 px-6">
@@ -218,22 +228,51 @@
   <section id="projects" class="py-20 px-6">
     <h2 class="text-3xl text-center mb-6">Projects</h2>
     <div class="flex flex-wrap justify-center gap-8">
-      <a href="https://github.com/your-username/taxi-data-analytics" target="_blank" class="project-card hover:scale-105">
+      <a href="https://github.com/shivam-chavan-05/Taxi-Data-Analytics" target="_blank" class="project-card hover:scale-105">
         <h3 class="text-xl mb-2">Taxi Data Analytics</h3>
-        <p class="text-sm">Used Python & GCP to build ETL pipelines for analyzing Yellow & Green taxi data.</p>
+        <p class="text-sm">Built a scalable ETL pipeline using Mage.ai on Google Cloud Platform to process and analyze NYC Yellow 
+            and Green Taxi trip data. Leveraged BigQuery for data warehousing, GCP Storage for ingestion, and Looker Studio for 
+            interactive dashboards. The pipeline automated transformations, enabling trend analysis and insights across millions 
+            of records.</p>
       </a>
-      <a href="https://github.com/your-username/foodstack-hoyahacks" target="_blank" class="project-card hover:scale-105">
-        <h3 class="text-xl mb-2">FoodStack – HoyaHacks</h3>
-        <p class="text-sm">Built an inventory optimization tool using ReactJS, Node.js, MongoDB, and SGD.</p>
+      <a href="https://github.com/omkar-79/foodstack-ml" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">FoodStack – HoyaHacks 2024</h3>
+        <p class="text-sm">Developed a full-stack inventory optimization tool using ReactJS, Node.js, and MongoDB, designed for 
+            small restaurants to forecast demand and reduce food waste. Integrated Databricks to apply Stochastic Gradient 
+            Descent for 7-day demand prediction, helping users make data-driven purchasing decisions.
+
+        </p>
       </a>
-      <a href="https://github.com/your-username/portfolio-website" target="_blank" class="project-card hover:scale-105">
-        <h3 class="text-xl mb-2">Portfolio Website</h3>
-        <p class="text-sm">Designed and developed a personal portfolio website using HTML, CSS, and JavaScript.</p>
+      <a href="https://github.com/shivam-chavan-05/Rent-Analysis" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Analysis of Housing Rent Prices in the U.S.</h3>
+        <p class="text-sm">Created an interactive data visualization tool using R Shiny and Leaflet, showing rental price trends 
+            across U.S. states and counties. The app allows users to explore geospatial rent data with filters by region and time 
+            period, making housing affordability insights easily accessible to users.</p>
       </a>
-      <a href="https://github.com/your-username/ecommerce-platform" target="_blank" class="project-card hover:scale-105">
-        <h3 class="text-xl mb-2">E-Commerce Platform</h3>
-        <p class="text-sm">Developed a scalable e-commerce platform using React, Node.js, and MongoDB.</p>
+      <a href="https://github.com/shivam-chavan-05/Insurance-Fraud-Detection" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Insurance Fraud Detection</h3>
+        <p class="text-sm">Designed a complete machine learning pipeline using Python, Pandas, Scikit-learn, and SMOTE to detect 
+            fraudulent claims. Trained multiple classification models, evaluated with metrics like precision, recall, and 
+            ROC-AUC, and optimized the best-performing model for real-world applicability.
+
+        </p>
       </a>
+      <a href="https://github.com/shivam-chavan-05/Ambrosia" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Ambrosia – Medically Tailored Meal</h3>
+        <p class="text-sm">Developed a responsive web app using React.js, Redux Toolkit, and ReactStrap for a modern UI/UX. 
+            The app supports user registration, meal browsing, cart management, and order placement, simulating a real-world meal 
+            delivery platform.</p>
+      </a>
+      <a href="https://github.com/shivam-chavan-05/Flight-Delay-Prediction" target="_blank" class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Machine Learning Projects</h3>
+        <p class="text-sm">Developed a flight delay prediction model using Decision Tree, AdaBoost, Gradient Boosting, and XGBoost, 
+            with performance evaluation across key metrics. Built a Naive Bayes model for chronic heart failure prediction with 
+            strong accuracy, and explored emotion recognition using KMeans for feature extraction and SVM for classification.
+        </p>
+      </a>
+      <p class="text-white text-sm mt-6">
+        See more on <a href="https://github.com/shivam-chavan-05" target="_blank" class="underline hover:text-gray-300">GitHub</a>
+      </p>
     </div>
   </section>
 
@@ -242,34 +281,51 @@
   <section id="experience" class="p-10">
     <h2 class="text-3xl text-center mb-6">Work Experience</h2>
     <div class="flex flex-wrap justify-center gap-8">
-      <a href="https://github.com/your-username/taxi-data-analytics" target="_blank" class="project-card hover:scale-105">
-        <h3 class="text-xl mb-2">Taxi Data Analytics</h3>
-        <p class="text-sm">Used Python & GCP to build ETL pipelines for analyzing Yellow & Green taxi data.</p>
+      <a class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Graduate Instructional Assistant</h3>
+        <p class="text-sm">The George Washington University</p>
+        <p class="text-sm">Washington, DC</p>
       </a>
-      <a href="https://github.com/your-username/foodstack-hoyahacks" target="_blank" class="project-card hover:scale-105">
-        <h3 class="text-xl mb-2">FoodStack – HoyaHacks</h3>
-        <p class="text-sm">Built an inventory optimization tool using ReactJS, Node.js, MongoDB, and SGD.</p>
+      <a class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Python Instructor</h3>
+        <p class="text-sm">Black Rocket Productions</p>
+        <p class="text-sm">Fairfax, Virginia</p>
       </a>
-      <a href="https://github.com/your-username/portfolio-website" target="_blank" class="project-card hover:scale-105">
-        <h3 class="text-xl mb-2">Portfolio Website</h3>
-        <p class="text-sm">Designed and developed a personal portfolio website using HTML, CSS, and JavaScript.</p>
+      <a class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Research Assistant</h3>
+        <p class="text-sm">PSCWP</p>
+        <p class="text-sm">Washington, DC</p>
       </a>
-      <a href="https://github.com/your-username/ecommerce-platform" target="_blank" class="project-card hover:scale-105">
-        <h3 class="text-xl mb-2">E-Commerce Platform</h3>
-        <p class="text-sm">Developed a scalable e-commerce platform using React, Node.js, and MongoDB.</p>
+      <a class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Data Analyst</h3>
+        <p class="text-sm">OSS Air Management Pvt. Ltd.</p>
+        <p class="text-sm">Mumbai, India</p>
       </a>
+      <a class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">Summer Intern</h3>
+        <p class="text-sm">Pillai College of Engineering</p>
+        <p class="text-sm">Panvel, India</p>
+      </a>
+      <a class="project-card hover:scale-105">
+        <h3 class="text-xl mb-2">MCM</h3>
+        <p class="text-sm">Business Analyst</p>
+        <p class="text-sm">Navi Mumbai, India</p>
+      </a>
+      <p class="text-white text-sm mt-6">
+        See more on <a href="https://www.linkedin.com/in/shivam-shashikant-chavan/" target="_blank" class="underline hover:text-gray-300">LinkedIn</a>
+      </p>
     </div>
   </section>
   <!-- Art Section -->
   <section id="art" class="py-20 px-6">
     <h2 class="text-3xl text-center mb-6">Art</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <img src="02.jpg" alt="Art 1" class="art-image">
-      <img src="02.jpg" alt="Art 2" class="art-image">
-      <img src="03.jpg" alt="Art 3" class="art-image">
-      <img src="04.jpg" alt="Art 4" class="art-image">
-      <img src="05.jpg" alt="Art 5" class="art-image">
-      <img src="06.jpg" alt="Art 6" class="art-image">
+      <img src="01.png" alt="Art 1" class="art-image">
+      <img src="04.png" alt="Art 2" class="art-image">
+      <img src="02.png" alt="Art 3" class="art-image">
+      <img src="03.png" alt="Art 4" class="art-image">
+      <img src="05.png" alt="Art 5" class="art-image">
+      <img src="06.png" alt="Art 6" class="art-image">
     </div>
   </section>
   <!-- Contact Section -->

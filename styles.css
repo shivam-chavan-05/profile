@@ -325,3 +325,18 @@ html {
   transform: scale(1.2); /* Slight zoom on hover */
   color: #2563EB; /* Blue color on hover */
 }
+
+/* Hero Section Instruction Text */
+#hero .flex-col {
+  margin-top: 2rem;
+}
+
+#hero img {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); /* Remove if not needed */
+}
+
+#hero p {
+  color: #d1d5db; /* Light gray text */
+  font-size: 0.875rem; /* Small text */
+  text-align: center;
+}
